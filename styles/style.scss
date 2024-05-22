@@ -1,0 +1,53 @@
+@import "resetstyle";
+@import "variables";
+@import "mixins";
+
+h1 {
+    color: $color-dark-green;
+    font-size: 28px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+div {
+    @include card(#FAF0BE, 500px, 200px);
+    margin-bottom: 30px;
+
+    p {
+
+        font-size: $medium-font-size;
+        color: $color-dark-green;
+
+        span {
+            text-decoration: underline;
+
+            // span:hover
+            &:hover {   
+                color: black;
+            }
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        color: gold;
+    }
+}
+
+article {
+   @include flex();
+}
+
+h5 {
+    @include card(rgb(201, 196, 189));
+    color: $color-dark-green;
+    font-size: $large-font-size;
+}
+
+a {
+    color: $color-dark-green;
+}
+
+h4 {
+    @include fonts($large-font-size, $color-dark-green, light)
+}
